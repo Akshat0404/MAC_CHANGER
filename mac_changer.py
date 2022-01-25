@@ -43,7 +43,7 @@ def argument():
 
 
 def mac(network_interface, new_mac):
-    print("[+] MAC address of " + network_interface + " has been changed to " + new_mac)
+    print("[+] MAC address of " + network_interface + " is changing to " + new_mac)
     subprocess.call(["ifconfig", network_interface, "down"])
     subprocess.call(["ifconfig", network_interface, "hw", "ether", new_mac])
     subprocess.call(["ifconfig", network_interface, "up"])
@@ -62,7 +62,7 @@ check_mac = check(options.network_interface)
 while 1:
     parser = optparse.OptionParser()
     if check_mac == options.new_mac:
-        print("[+] The new MAC address is ", check_mac)
+        print("[+] MAC address has been successfully changed to ", check_mac)
         break
     else:
         parser.error("[-] Failed to change the MAC address")
