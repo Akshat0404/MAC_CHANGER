@@ -44,11 +44,19 @@ Steps to use the tool:
        
             python3 mac_changer.py -n eth0 -c 00:a4:45:56:f2:6b;
   
-  9. By running this command the mac address of the network interface eth0 changes to the mac address we want i.e. 00:a4:45:56:f2:6b and the following message will appear after        the successful execution of the command;
+  9. By running this command the mac address of the network interface eth0 changes to the mac address we want 
+     
+     i.e. 00:a4:45:56:f2:6b and the following message will appear after the successful execution of the command;
        
-          [+] MAC address of eth0 has been changed to 00:a4:45:56:f2:6b.
-       
+          [+] Current MAC is  00:11:22:33:44:66
+          [+] MAC address of eth0 is changing to 00:a4:45:56:f2:6b
+          [+] MAC address has been successfully changed to  00:a4:45:56:f2:6b
+          
+
+      The execution message will also include the old and new MAC address.
+      
       The same implies for the network interface wlan0.
+      
   10. Now if we run the ifconfig command, we can see that the MAC address has been changed to 00:a4:45:56:f2:6b;
       
          ifconfig
